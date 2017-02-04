@@ -14,7 +14,7 @@ var articles = {
   
   `
   },
-  'article-two': {title: 'Article Two | Parveen Khurana', heading : 'Article Two', date : 'Feb 11, 2017', content: `
+  'article-two': {'title': 'Article Two | Parveen Khurana', 'heading' : 'Article Two', 'date' : 'Feb 11, 2017', 'content': `
   <p> this is the second paragraph </p>
   <p> its working </p>
   
