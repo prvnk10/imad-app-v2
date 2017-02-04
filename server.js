@@ -41,7 +41,7 @@ function createTemplate(data){
     <h3> ${heading} </h3>
     <div> ${date} </div>
     
-    <div> ${container} </div>
+    <div> ${content} </div>
     </body>
     </html>
   `;
@@ -55,7 +55,7 @@ app.get('/', function (req, res) {
 
 app.get('/:articleName', function(req,res){
     var articleName = req.params.articleName;
-  res.send(createTemplate(articles[articleName]));    
+    res.send(createTemplate(articles[articleName]));    
 });
 
 app.get('/ui/style.css', function (req, res) {
