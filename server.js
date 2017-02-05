@@ -40,7 +40,12 @@ function createTemplate(data){
     <div> ${date} </div>
     
     <div> ${content} </div>
-    <div> <input type='text' id='comment'> </input> <input type='submit' name='submit' value='submit' id='submit_btn'> </input> </div>
+    <div>
+    <input type='text' id='comment'> </input>
+    <input type='submit' name='submit' value='submit' id='submit_btn'>
+    </input> 
+    <span id='showComments'> </span>
+    </div>
     </body>
     </html>
   `;
