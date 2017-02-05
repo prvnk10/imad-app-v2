@@ -6,7 +6,7 @@ button.onclick = function(){
   var xhttp = new XMLHTTPRequest();
     
   xhttp.onreadystatechange = function(){
-  if(xhttp.readyState == XMLHttpRequest.DONE && xhttp.status == 200){
+  if(xhttp.readyState === XMLHttpRequest.DONE && xhttp.status === 200){
             
     var comments = xhttp.responseText;
     comments = JSON.parse(comments);
