@@ -34,7 +34,9 @@ function createTemplate(data){
   
   var htmlTemplate = `
     <html>
-    <head> <title> ${title} </title> </head>
+    <head> 
+    <script type='text/javascript' src='/ui/main.js'> </script>
+    <title> ${title} </title> </head>
     <body>
     <h3> ${heading} </h3>
     <div> ${date} </div>
