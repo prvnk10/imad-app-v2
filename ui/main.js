@@ -1,6 +1,8 @@
 console.log('Loaded!');
 
-
+var button = document.getElementById('submit_btn');
+button.onclick = alert(234234);
+/*
 var submit = document.getElementById('submit_btn');
 
 submit.onclick = function(){
@@ -27,3 +29,5 @@ submit.onclick = function(){
     xhttp.open('GET', 'http://prvnk10.imad.hasura-app.io/comment?comment=' + comment, true);
     xhttp.send(null);
 };
+
+*/
