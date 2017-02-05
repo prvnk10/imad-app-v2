@@ -1,7 +1,7 @@
 console.log('Loaded!');
 
 var button = document.getElementById('submit_btn');
-button.onclick = alert(234234);
+// button.onclick = alert(234234);
 /*
 var submit = document.getElementById('submit_btn');
 
