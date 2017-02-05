@@ -63,6 +63,13 @@ app.get('/counter', function(req,res){
   res.send(counter.toString());
 });
 
+var comments = [];
+app.get('/comment', function(req,res){
+     var comment = req.params.comment;
+     comments.push(comment);
+     res.send(JSON.stringify(comments));
+});
+
 app.get('/:articleName', function(req,res){
    var articleName = req.params.articleName;
    res.send(createTemplate(articles[articleName]));
