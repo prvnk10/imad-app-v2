@@ -1,5 +1,6 @@
 console.log('Loaded!');
 
+/*
 var button = document.getElementById('submit_btn');
 button.onclick = function(){
 
@@ -26,5 +27,25 @@ button.onclick = function(){
   xhttp.open('GET', 'http://prvnk10.imad.hasura-app.io/comment?c=' + comment, true);
   xhttp.send(null);
 
+};  */
+
+var button = document.getElementById('count');
+button.onclick = function(){
+    
+    
+  var xhttp = new XMLHTTPRequest();
+    
+  xhttp.onreadystatechange = function(){
+  if(xhttp.readyState === XMLHttpRequest.DONE && xhttp.status === 200){
+    
+    var counterValue = xhttp.responseText;
+    var comment_box = document.getElementById('counter');
+    comment_box.innerHTML = counterValue;
+    }
+  };
+    
+  xhttp.open('GET', 'http://prvnk10.imad.hasura-app.io/counter', true);
+  xhttp.send(null);
+    
 };
 
