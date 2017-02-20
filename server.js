@@ -84,6 +84,15 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
+app.get('/ui/bootstrap.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'bootstrap.css'));
+});
+
+app.get('/ui/bootstrap.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'bootstrap.js'));
+});
+
+
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
