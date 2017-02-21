@@ -2,16 +2,35 @@ body {
     font-family: sans-serif;
   /*  background-color: lightgrey; */
     margin-top: 75px;
+    position: relative;
 }
 
-.center {
-    text-align: center;
+.container-fluid {
+    /* text-align: center;  */
+    padding-top: 70px;
+
 }
+
+.bg-2 { background-color: #1E88E5; padding-top:50px;height: 400px;color: #fff;}
+
+#projects { background-color: #009688; padding-top:50px;height: 450px;color: #fff; color: black;}
+#like { color: red;}
+
+#mainpic { padding-top: 25px;}
+
+#technologies { background-color: #ff9800 ; padding-top: 50px;height: 450px;color: #fff;}
+
+
+#courses { padding-top:50px; height:350px;color: #fff; background-color: #673ab7;}
+li a { color: black;}
+li a:hover { color: white;}
 
 /*
 .text-big {
     font-size: 300%;
 }  */
+
+a { color: black;}
 
 .bold {
     font-weight: bold;
@@ -20,4 +39,9 @@ body {
 .img-medium {
     height: 200px;
 }
+
+#contact { padding-bottom: 100px;}
+#content img { height: 250px; }
+#connect { padding-top: 50px;}
+#footer { background-color: #383f48; height: 250px; padding-top: 220px; color: white;}
 
