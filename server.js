@@ -97,6 +97,18 @@ app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
+app.get('/ui/fb-icon.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'fb-icon.png'));
+});
+
+app.get('/ui/linked-icon.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'linked-icon.png'));
+});
+
+app.get('/ui/github-icon.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'github-icon.png'));
+});
+  
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
