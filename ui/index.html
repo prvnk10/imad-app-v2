@@ -2,60 +2,167 @@
 <html>
     <head>
      <link href="/ui/style.css" rel="stylesheet" />
-     <link href="/ui/bootstrap.css" rel="stylesheet" />
      <script type="text/javascript" src="/ui/main.js"> </script>
-     <script type="text/javascript" src="/ui/bootstrap.js"> </script>
-  
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title> Parveen Khurana </title>
   </head>
 
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+        
+   <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div id="container-fluid">
 
+     <ul class="nav navbar-nav nav-tabs nav-justified">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#courses"> Courses </a></li>
+      <li><a href="#technologies"> Technologies </a> </li>
+      <li><a href="#projects"> Projects </a></li>
+      <li><a href="#contact"> Contact </a></li>
+     </ul>
+    </div>
+   </nav>
+  
+   <div class="container-fluid bg-2">
 
-    <body>
-      <div id="container-fluid">
-       <ul class="nav nav-pills">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#"> Resume </a></li>
-        <li><a href="#"> Projects </a></li>
-        <li><a href="#"> Contact </a></li>
-       </ul>
-       </div>
+    <div class="col-sm-4">
+    <img src="/ui/p.jpg" class="img-medium img-thumbnail" id="mainpic"/>
+    </div>
 
-       <div class="container-fluid">
-        <img src="/ui/p.jpg" class="img-medium img-rounded"/>
+    <div class="container-fluid  col-sm-8">
+    <h3> Parveen Khurana </h3>
+     <p> 3rd year student at NIT Kurukshetra </p>
+    </div>
 
+   </div>
+  
 
-       <div class="container-fluid bg-2">
-        <h3> What Am I? </h3>
-        <ul>
-          <li> web developer </li>
-          <li>  </li>
-          <li>  </li>
-         </ul>
-       </div>
+   <div class="container-fluid" id="courses">
+    <h3> Courses Taken </h3>
+    <ul>
+     <li> <a href="https://cs50.harvard.edu" target="_blank"> CS50 </a> </li>
+     <li> <a href="https://courses.edx.org/courses/course-v1:ColumbiaX+CSMM.101x+1T2017/info" target="_blank"> Artificial Intelligence </a> (taking) </li>
+     <li> <a href="https://courses.edx.org/courses/course-v1:Microsoft+DEV210x+2T2016/info" target="_blank"> Introduction to C++ </a> </li>
+     <li> <a href="https://onlinecourses.nptel.ac.in/noc17_cs06/" target="_blank"> IMAD </a> (taking) </li>
+    </ul>
+   </div>
+  
+  <div class="container-fluid" id="technologies">
 
+   <div class="col-sm-3" id="fe">
+   <h4> Front End </h4>
+   <li> HTML </li>
+   <li> CSS </li>
+   <li> Javascript </li>
+   <li> Node.js </li>
+   </div>
+
+   <div class="col-sm-3" id="be">
+   <h4> Back End </h4>
+   <li> PHP </li>
+   <li> MySQL</li>
+   </div>
+
+   <div class="col-sm-3" id="fw">
+   <h4> Frameworks </h4>
+   <li> Bootstrap </li>
+   <li> jQuery </li>
+   <li> AJAX </li>
+   </div>
+
+   <div class="col-sm-3" id="coding">
+   <h4> Coding </h4>
+   <li> C </li>
+   <li> C++ </li>
+   </div>
+
+  </div>
+  
+  <div class="container-fluid" id="projects">
+
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+          Digital Nervous System </a>
+        </h4>
       </div>
-
-      <div class="container-fluid">
-        <h3> Projects </h3>
-        <div> Digital Nervous System </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+        <div class="panel-body"> to be added soon </div>
       </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+          Inventory Management System </a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+        <div class="panel-body"> to be added soon </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+          Notes Sharing Site </a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+        <div class="panel-body">
+   to be added soon
+        </div>
+      </div>
+    </div>
+  </div>
 
-       <div class="container-fluid bg-3" id="contact">
-         <h3> Where to find me? </h3>
-         <p>  khsfshffjshgsriushfsiu sf</p>
-       </div>
+</div>
 
-       <div class="container-fluid text-center" id="">
-         Mobile: +91 9034504503 , 9467311934  <br>
-         <a href="mailto:prvnk10@gmail.com"> Email </a>
-       </div>
+  <div class="container-fluid bg-3" id="contact">
 
-      <a href="/article-one" > Next Page </a>
-        This <button type="button" id="comment" class='btn btn-info' onclick="tryThis()">  button </button> has been clicked <span id='commentValue'> 0 </span> times
+    <div class="text-center">
+    <h3>  CONNECT WITH ME </h3>
+    </div>
+
+    <div id="connect">
+    <a href="https://www.facebook.com/prvnk10" target="_blank" class="col-sm-4">
+     <div style="max-width: 160px; max-height: 160px;">
+       <img src="/ui/fb-icon.png">
+     </div>
+   </a>
+
+   <a href="https://www.linkedin.com/in/parveen-k-470a62b7/" target="_blank" class="col-sm-4 img-circle">
+    <div style="max-width: 160px; max-height: 100px; height: 100px">
+      <img src="/ui/linked-icon.png">
+    </div>
+  </a>
+
+  <a href="https://github.com/prvnk10" target="_blank" class="col-sm-4">
+   <div style="max-width: 160px; max-height: 160px;">
+     <img src="/ui/github-icon.png">
+   </div>
+ </a>
+
+  </div>
+
+  </div>
+
+   <div id="footer" class="text-center">
+     Made with
+     <a href="" id="like" onclick="incrementLike()">
+       <span class="glyphicon glyphicon-heart icoheart-fill heart beat" id="likes"> </span>
+     </a>
+     by Parveen Khurana
+   </div>
+
 
     </body>
 </html>
