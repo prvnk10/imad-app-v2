@@ -1,6 +1,16 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
+var Pool = require('pg').Pool;
+
+var config = {
+    user: 'prvnk10',
+    database: 'prvnk10',
+    host: 'db.imad.hasura-app.io',
+    port: '5432',
+    password: process.env.DB_PASSWORD
+};
+
 
 var app = express();
 app.use(morgan('combined'));
@@ -77,7 +87,23 @@ app.get('/:articleName', function(req,res){
    res.send(createTemplate(articles[articleName]));
 });
 
-
+var pool = new Pool(config);
+app.get('/articles/:articleName', function(req,res){
+  pool.query("SELECT * FROM article WHERE title = '" + req.params.articleName + "'" , function(err,result){
+        
+        if(err){
+            res.status(500).send(err.toString());
+        } else {
+            if(result.rows.length === 0){
+                res.status(404).send('Article not found');
+            } else {
+                var articleData = result.rows[0];
+                res.send(createTemplate(articleData));
+            }
+        }
+          
+      });
+});
 
 
 app.get('/ui/style.css', function (req, res) {
