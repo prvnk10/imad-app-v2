@@ -130,7 +130,7 @@ app.get('/ui/bootstrap.js', function (req, res) {
 });
 
 function hash(input, salt){
-  var hashed = hash(input, salt, 10000, 512, 'sha512');
+  var hashed = hash(input, salt, 1000, 512, 'sha512');
   return hashed.toString('hex');
 }
 
