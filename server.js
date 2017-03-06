@@ -4,6 +4,7 @@ var path = require('path');
 var Pool = require('pg').Pool;
 var crypto = require('crypto');
 var bodyParser = require('body-parser');
+var session = require('express-session');
 
 
 var config = {
@@ -18,6 +19,11 @@ var app = express();
 app.use(morgan('combined'));
 
 app.use(bodyParser.json());
+
+app.use(session({
+    secret: 'someRandomSecretValue',
+    cookie: {maxAge: 1000*60*60*24*30}
+}));
 
 var articles = {
   'article-one': { title: 'Article One | Parveen Khurana', heading : 'Article One', date : 'Feb 4, 2017', content: `
@@ -103,7 +109,6 @@ app.post('/create-user', function(req,res){
     });
 });
 
-
 app.post('/login', function(req,res){
    var username = req.body.username;
    var password = req.body.password;
@@ -129,6 +134,7 @@ app.post('/login', function(req,res){
               if(hashedPassword === dbString)
               {
                   // set session
+                  req.session.auth = {userId: result.rows[0].id};
                   res.send("successfully logged in!");
               }
               else
