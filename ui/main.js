@@ -5,12 +5,12 @@ function tryThis(){
 
   xhttp.onreadystatechange = function(){
   if(xhttp.readyState === XMLHttpRequest.DONE && xhttp.status === 200){
-      var span = document.getElementById('commentValue');
+      var span = document.getElementById('likes');
       span.innerHTML = xhttp.responseText;
     }
  };
  xhttp.open('GET', '/counter', true);
- xhttp.send(null);
+ xhttp.send('null');
 }
 
 
