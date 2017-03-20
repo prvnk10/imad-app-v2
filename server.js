@@ -56,7 +56,7 @@ function createTemplate(data){
     <head> 
     <script type='text/javascript' src='/ui/main.js'> </script>
     <title> ${title} </title> </head>
-    <body>
+    <body class="text-center">
     <h3> ${heading} </h3>
     <div> ${date.toString()} </div>
     
