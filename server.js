@@ -81,7 +81,7 @@ function createTemplate(data){
     <div> ${date.toDateString()} </div>
     </div>
     
-    <div> ${content} </div>
+    <div class="alert alert-warning"> ${content} </div>
     
     <div>
      <input type='text' id='comment'>
