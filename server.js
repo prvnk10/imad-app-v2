@@ -71,7 +71,7 @@ function createTemplate(data){
       
       <li> <a href="/articles/article-one"> Article 1 </a> </li>
       <li> <a href="/articles/article-two"> Article 2 </a> </li> 
-      <li> <a href="/articles/article-three#"> Article 3 </a> </li> 
+      <li> <a href="/articles/article-three"> Article 3 </a> </li> 
      </ul>
     </div>
   </nav>
