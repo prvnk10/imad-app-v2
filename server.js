@@ -57,6 +57,21 @@ function createTemplate(data){
     <script type='text/javascript' src='/ui/main.js'> </script>
     <title> ${title} </title> </head>
     <body class="text-center">
+
+    <nav class="navbar navbar-default">
+     <div class="container-fluid">
+     <div class="navbar-header">
+      <a class="navbar-brand" href="/"> Home </a>
+     </div>
+     <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Page 1</a></li>
+      <li><a href="#">Page 2</a></li> 
+      <li><a href="#">Page 3</a></li> 
+     </ul>
+    </div>
+  </nav>
+
     <h3> ${heading} </h3>
     <div> ${date.toDateString()} </div>
     
