@@ -26,21 +26,24 @@ app.use(session({
 }));
 
 var articles = {
-  'article-one': { title: 'Article One | Parveen Khurana', heading : 'Article One', date : 'Feb 4, 2017', content: `
+  'article-one': { title: 'Article One', heading : 'Article One', date : 'Feb 4, 2017', content: `
 
   <p> this is the first paragraph </p>
-  <p> its working </p>
+  <p> this is the first paragraph </p>
+  <p> this is the first paragraph </p>
   
   `
   },
-  'article-two': {'title': 'Article Two | Parveen Khurana', 'heading' : 'Article Two', 'date' : 'Feb 11, 2017', 'content': `
+  'article-two': {'title': 'Article Two', 'heading' : 'Article Two', 'date' : 'Feb 11, 2017', 'content': `
   <p> this is the second paragraph </p>
-  <p> its working </p>
+  <p> this is the second paragraph </p>
+  <p> this is the second paragraph </p>
   
   `},
-  'article-three' : {title: 'Article Three | Parveen Khurana', heading : 'Article Three', date : 'Feb 4, 2017', content: `
+  'article-three' : {title: 'Article Three', heading : 'Article Three', date : 'Feb 4, 2017', content: `
   <p> this is the third paragraph </p>
-  <p> its working </p>
+  <p> this is the third paragraph </p>
+  <p> this is the third paragraph </p>
   
   `}
 };
@@ -54,12 +57,16 @@ function createTemplate(data){
   var htmlTemplate = `
     <html>
     <head> 
+    
     <script type='text/javascript' src='/ui/main.js'> </script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title> ${title} </title> </head>
+    <title> ${title} </title> 
+    </head>
+    
     <body>
 
     <nav class="navbar navbar-default">
@@ -173,15 +180,29 @@ app.post('/login', function(req,res){
 });
 
 app.get('/check-login', function(req,res){
-   if(!(req.session && req.session.auth && req.session.auth.userId))
+  if (req.session && req.session.auth && req.session.auth.userId) {
+    
+    pool.query('SELECT * FROM "user" WHERE id = $1', [req.session.auth.userId], function (err,result) {
+           if (err)
+           {
+              res.status(500).send(err.toString());
+           } 
+           else
+           {
+              res.send(result.rows[0].username);    
+           }
+       });
+   } 
+   else
    {
-       res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+       res.status(400).send('You are not logged in');
    }
 });
 
+
 app.get('/logout', function(req,res){
    delete req.session.auth;
-   res.send('logged out');
+   res.send('<div class="alert alert-success"> Logged out successfully <a href="/"> Home </a> </div>');
 });
 
 var counter = 0;
@@ -232,40 +253,8 @@ app.get('/articles/:articleName', function(req,res){
       });
 });
 
-app.get('/ui/style.css', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'style.css'));
-});
-
-app.get('/ui/bootstrap.css', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'bootstrap.css'));
-});
-
-app.get('/ui/bootstrap.js', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'bootstrap.js'));
-});
-
-app.get('/ui/main.js', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'main.js'));
-});
-
-app.get('/ui/fb-icon.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'fb-icon.png'));
-});
-
-app.get('/ui/linked-icon.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'linked-icon.png'));
-});
-
-app.get('/ui/github-icon.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'github-icon.png'));
-});
-  
-app.get('/ui/madi.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
-});
-
-app.get('/ui/p.jpg', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'p.jpg'));
+app.get('/ui/:fileName', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', req.params.fileName));
 });
 
 
