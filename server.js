@@ -75,9 +75,11 @@ function createTemplate(data){
      </ul>
     </div>
   </nav>
-
+    
+    <div class="alert alert-info">
     <h3> ${heading} </h3>
     <div> ${date.toDateString()} </div>
+    </div>
     
     <div> ${content} </div>
     <div>
