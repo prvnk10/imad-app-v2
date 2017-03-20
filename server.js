@@ -63,9 +63,9 @@ function createTemplate(data){
     <div> ${content} </div>
     <div>
     <input type='text' id='comment'> </input>
-    <input type='submit' name='submit' value='submit' id='submit_btn'>
+    <input type='submit' name='submit' value='submit' id='submit_btn' onclick="submitComment()">
     </input> 
-    <span id='showComments'> </span>
+    <span id='showComments'> <ul> </ul> </span>
     </div>
     </body>
     </html>
@@ -171,6 +171,7 @@ app.get('/counter', function(req,res){
 var comments = [];
 app.get('/comment', function(req,res){
      var comment = req.query.c;
+     // console.log(comment);
      comments.push(comment);
      res.send(JSON.stringify(comments));
 });
