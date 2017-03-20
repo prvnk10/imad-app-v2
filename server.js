@@ -60,7 +60,7 @@ function createTemplate(data){
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <title> ${title} </title> </head>
-    <body class="text-center">
+    <body>
 
     <nav class="navbar navbar-default">
      <div class="container-fluid">
