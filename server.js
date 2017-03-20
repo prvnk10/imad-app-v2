@@ -192,7 +192,7 @@ app.get('/counter', function(req,res){
 var comments = [];
 app.get('/comment', function(req,res){
      var comment = req.query.c;
-     // console.log(comment);
+      console.log(comment);
      comments.push(comment);
      res.send(JSON.stringify(comments));
 });
