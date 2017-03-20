@@ -68,10 +68,10 @@ function createTemplate(data){
       <a class="navbar-brand" href="/"> Home </a>
      </div>
      <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Page 1</a></li>
-      <li><a href="#">Page 2</a></li> 
-      <li><a href="#">Page 3</a></li> 
+      
+      <li> <a href="/articles/article-one"> Article 1 </a> </li>
+      <li> <a href="/articles/article-two"> Article 2 </a> </li> 
+      <li> <a href="/articles/article-three#"> Article 3 </a> </li> 
      </ul>
     </div>
   </nav>
