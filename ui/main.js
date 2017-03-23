@@ -63,13 +63,13 @@ function login()
    };  
     
     var username = document.getElementById('username').value;
-    var pw = document.getElementById('pwd').value;
+    var password = document.getElementById('pwd').value;
     
     if(username.length != 0  && pw.length != 0)
     {
         alert(324);
         xhttp.open('POST', 'http://prvnk10.imad.hasura-app.io/login', true);
         xhttp.setRequestHeader('Content-Type', 'application/json');
-        xhttp.send(JSON.stringify({username: username, password: pw}));
+        xhttp.send(JSON.stringify({username: username, password: password}));
     }
 }
