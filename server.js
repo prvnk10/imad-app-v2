@@ -114,9 +114,12 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+/*
 app.get('/login' , function(req,res){
    res.sendFile(path.join(__dirname, 'ui', 'login.html')); 
 });
+*/
+
 
 function hash(input, salt){
     var hashed = crypto.pbkdf2Sync(input, salt, 10000, 512, 'sha512');
