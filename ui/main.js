@@ -65,7 +65,7 @@ function login()
     var username = document.getElementById('username').value;
     var pw = document.getElementById('pwd').value;
     
-    if(username.length !== 0  && pw.length !== 0)
+    if(username.length != 0  && pw.length != 0)
     {
         alert(324);
         xhttp.open('POST', 'http://prvnk10.imad.hasura-app.io/login', true);
