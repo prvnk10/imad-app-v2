@@ -51,11 +51,11 @@ function login()
    {
      alert('successfully logged in');
    }
-   else if(status === 403)
+   else if(xhttp.status === 403)
    {
        alert('username/pw is invalid');
    }
-   else if(status === 500)
+   else if(xhttp.status === 500)
    {
        alert('something went wrong on the server');
    }
