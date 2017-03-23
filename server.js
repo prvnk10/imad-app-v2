@@ -71,11 +71,18 @@ function createTemplate(data){
 
     <nav class="navbar navbar-default">
      <div class="container-fluid">
-     <div class="navbar-header">
-      <a class="navbar-brand" href="/"> Home </a>
-     </div>
+     
+      <div class="navbar-header">
+       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+       </button>
+       <a class="navbar-brand" href="/"> Home </a>
+      </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar"> 
      <ul class="nav navbar-nav">
-      
       <li> <a href="/articles/article-one"> Article 1 </a> </li>
       <li> <a href="/articles/article-two"> Article 2 </a> </li> 
       <li> <a href="/articles/article-three"> Article 3 </a> </li> 
