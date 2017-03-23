@@ -11,9 +11,11 @@ body {
 
 }
 
-.bg-2 { background-color: #1E88E5; padding-top:50px;height: 400px;color: #fff;}
+/* .bg-2 { background-color: #1E88E5; padding-top:50px;height: 400px;color: #fff;} */
 
-#projects { background-color: #009688; padding-top:50px;height: 450px;color: #fff; color: black;}
+.bg-2 {padding-top:50px;height: 400px;color: #fff;}
+
+
 #like { color: red;}
 
 #mainpic { padding-top: 25px;}
