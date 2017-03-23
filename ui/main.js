@@ -41,3 +41,34 @@ function submitComment(){
   xhttp.send(null);
 
 }
+
+function login()
+{
+   var xhttp = new XMLHttpRequest();
+   xhttp.onreadystatechange = function(){
+       
+   if(xhttp.readyState === XMLHttpRequest.DONE && xhttp.status === 200)
+   {
+     alert('successfully logged in');
+   }
+   else if(status === 403)
+   {
+       alert('username/pw is invalid');
+   }
+   else if(status === 500)
+   {
+       alert('something went wrong on the server');
+   }
+   
+   };  
+    
+    var username = document.getElementById('username').value;
+    var pw = document.getElementById('pwd').value;
+    
+    if(username.length !== 0  && pw.length !== 0)
+    {
+        xhttp.open('POST', 'http://prvnk10.imad.hasura-app.io/login', true);
+        xhttp.setRequestHeader('Content-Type', 'ápplication/json');
+        xhttp.send(JSON.stringify({username: username, password: pw} ));
+    }
+}
