@@ -68,7 +68,7 @@ function login()
     if(username.length !== 0  && pw.length !== 0)
     {
         xhttp.open('POST', 'http://prvnk10.imad.hasura-app.io/login', true);
-        xhttp.setRequestHeader('Content-Type', 'ápplication/json');
+        xhttp.setRequestHeader('Content-Type', 'application/json');
         xhttp.send(JSON.stringify({username: username, password: pw} ));
     }
 }
