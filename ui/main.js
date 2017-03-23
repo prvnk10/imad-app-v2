@@ -24,7 +24,7 @@ function submitComment(){
     var comments = xhttp.responseText;
     comments = JSON.parse(comments);
 
-     
+     list = '';
     for(var i=0; i<comments.length ; i++){
      list += '<li>' + comments[i] + '</li>';
     }
