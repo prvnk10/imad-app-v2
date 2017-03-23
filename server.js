@@ -97,7 +97,7 @@ function createTemplate(data){
     
     <div class="alert alert-warning"> ${content} </div>
     
-    <div>
+    <div col-sm-12>
      <input type='text' id='comment'>
      <input type='submit' name='submit' value='submit' id='submit_btn' onclick="submitComment()">
      <span id='showComments'> <ul> </ul> </span>
