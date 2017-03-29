@@ -64,7 +64,7 @@ function login()
     
     var username = document.getElementById('username').value;
     var password = document.getElementById('pwd').value;
-    
+    alert(username.length);
     if(username.length != 0  && password.length != 0)
     {
         alert(324);
